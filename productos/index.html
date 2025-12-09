@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Productos — Oml America</title>
+
+  <link rel="icon" type="image/png" href="https://frutasalifruit.com/wp-content/uploads/grupoalifruit.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS EXTERNO -->
+  <link rel="stylesheet" href="/assets/css/productos.css">
+</head>
+<body>
+
+<!-- TOPBAR (móvil / tablet) -->
+<header class="topbar" aria-label="Barra superior">
+  <div class="topbar__in">
+    <a class="brand-link" href="/" aria-label="Ir al inicio">
+      <div class="brand">
+        <div class="logo-sm" aria-hidden="true">
+          <img src="https://frutasalifruit.com/wp-content/uploads/grupoalifruit.png" alt="">
+        </div>
+        <span class="brand-name">Oml America</span>
+      </div>
+    </a>
+    <div class="right-actions">
+      <button class="btn-icon" id="btnMenu" aria-label="Abrir menú" type="button">
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="scrim" id="scrim"></div>
+
+<!-- DRAWER (móvil / tablet) -->
+<aside class="drawer" id="drawer" aria-label="Menú principal">
+  <div class="d-top">
+    <a class="d-brand-link" href="/" aria-label="Ir al inicio">
+      <div class="d-brand">
+        <div class="logo-sm" aria-hidden="true">
+          <img src="https://frutasalifruit.com/wp-content/uploads/grupoalifruit.png" alt="">
+        </div>
+        <span class="brand-name">Oml America</span>
+      </div>
+    </a>
+    <button class="d-close" id="btnClose" aria-label="Cerrar menú" type="button">
+      <i class="fa fa-times"></i>
+    </button>
+  </div>
+
+  <nav class="menu" role="navigation">
+    <ul>
+      <li><a href="/" data-i18n="menu.home">Inicio</a></li>
+      <li><a href="/servicios/" data-i18n="menu.services">Servicios a Empresas</a></li>
+      <li><a href="/somos/" data-i18n="menu.about">Quiénes Somos</a></li>
+      <li><a href="/productos/" class="active" data-i18n="menu.products">Productos</a></li>
+      <li><a href="/certificaciones/" data-i18n="menu.certs">Certificaciones</a></li>
+      <li><a href="/calidad/" data-i18n="menu.quality">Calidad</a></li>
+      <li><a href="/calendario/" data-i18n="menu.calendar">Calendario Varietal</a></li>
+      <li><a href="/contacto/" data-i18n="menu.contact">Contacto y Ubicación</a></li>
+      <li><a href="/galeria/" data-i18n="menu.gallery">Galeria</a></li>
+    </ul>
+  </nav>
+
+  <!-- BARRA DE IDIOMAS HORIZONTAL (CEL / TABLET) -->
+  <div class="drawer-lang">
+    <button class="drawer-lang-btn" type="button" data-lang-option="es">
+      <span class="flag flag-es"></span>
+      <span class="drawer-lang-label">Español</span>
+    </button>
+    <button class="drawer-lang-btn" type="button" data-lang-option="en">
+      <span class="flag flag-en"></span>
+      <span class="drawer-lang-label">English</span>
+    </button>
+    <button class="drawer-lang-btn" type="button" data-lang-option="nl">
+      <span class="flag flag-nl"></span>
+      <span class="drawer-lang-label">Nederlands</span>
+    </button>
+  </div>
+</aside>
+
+<!-- ====== LATERAL IZQUIERDO (DESKTOP) ====== -->
+<aside id="leftHeader" class="left" aria-label="Encabezado izquierdo">
+  <a href="/" aria-label="Ir al inicio">
+    <img class="logo-lg" src="https://frutasalifruit.com/wp-content/uploads/grupoalifruit.png" alt="Alifruit – Sabor de la Tierra" />
+  </a>
+
+  <nav class="menu-d" aria-label="Menú principal">
+    <ul>
+      <li><a href="/" data-i18n="menu.home">Inicio</a></li>
+      <li><a href="/servicios/" data-i18n="menu.services">Servicios a Empresas</a></li>
+      <li><a href="/somos/" data-i18n="menu.about">Quiénes Somos</a></li>
+      <li><a href="/productos/" class="active" data-i18n="menu.products">Productos</a></li>
+      <li><a href="/certificaciones/" data-i18n="menu.certs">Certificaciones</a></li>
+      <li><a href="/calidad/" data-i18n="menu.quality">Calidad</a></li>
+      <li><a href="/calendario/" data-i18n="menu.calendar">Calendario Varietal</a></li>
+      <li><a href="/contacto/" data-i18n="menu.contact">Contacto y Ubicación</a></li>
+      <li><a href="/galeria/" data-i18n="menu.gallery">Galeria</a></li>
+    </ul>
+  </nav>
+
+  <div class="foot">
+
+    <!-- SELECTOR IDIOMA DESKTOP (DROPDOWN) -->
+    <div class="lang-switcher" data-lang-switcher>
+      <button class="lang-current" type="button" aria-haspopup="listbox" aria-expanded="false">
+        <span class="flag flag-es"></span>
+        <span class="lang-label">Español</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <ul class="lang-menu" role="listbox">
+        <li data-lang-option="es">
+          <span class="flag flag-es"></span>
+          <span data-i18n="ui.lang.es">Español</span>
+        </li>
+        <li data-lang-option="en">
+          <span class="flag flag-en"></span>
+          <span data-i18n="ui.lang.en">English</span>
+        </li>
+        <li data-lang-option="nl">
+          <span class="flag flag-nl"></span>
+          <span data-i18n="ui.lang.nl">Nederlands</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="social">
+      <a class="fb" aria-label="Facebook" href="https://www.facebook.com/Grupo-Alifruit-Sabor-de-la-Tierra-1671097156478760/" target="_blank" rel="noopener">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a class="yt" aria-label="YouTube" href="https://www.youtube.com/" target="_blank" rel="noopener">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+    </div>
+    <div class="copy">
+      <div data-i18n="footer.rights">Todos los derechos reservados</div>
+      <div data-i18n="footer.brand">Oml America © 2016 | Diseño Web |</div>
+      <div><a href="http://guellcom.com/" target="_blank" rel="noopener">GuellCom_</a></div>
+    </div>
+  </div>
+</aside>
+<!-- ====== FIN LATERAL IZQUIERDO ====== -->
+
+<main>
+  <!-- HERO -->
+  <section class="hero" aria-label="Imagen de cabecera">
+    <img src="https://frutasalifruit.com/wp-content/uploads/colage.jpg" alt="Collage de frutas — Alifruit">
+    <!-- título 20px más arriba -->
+    <div class="hero-title" data-i18n="hero.products">Productos</div>
+  </section>
+
+  <!-- SECCIÓN ESTILO SBERRIES (BERRIES + TROPICALES) -->
+  <section class="berries-section" aria-label="Catálogo de berries y frutas tropicales">
+    <div class="berries-inner">
+      <header class="berries-header">
+        <h1 class="berries-title" data-i18n="products.title">PRODUCTOS</h1>
+        <div class="berries-line"></div>
+      </header>
+
+      <!-- FRAMBUESAS -->
+      <article class="berries-item">
+        <div class="berries-info">
+          <h2 data-i18n="berries.raspberries">FRAMBUESAS</h2>
+
+          <h3 data-i18n="berries.packaging">Embalaje:</h3>
+          <ul>
+            <li>125gr clamshell punnets</li>
+            <li>Cestas de 250 gr</li>
+          </ul>
+
+          <p><span class="label" data-i18n="berries.exportedby">Exportado por:</span> transporte aéreo y terrestre</p>
+          <p><span class="label" data-i18n="berries.origin">Origen:</span> Marruecos / España / Portugal / Holanda</p>
+        </div>
+        <div class="berries-photo">
+          <img src="https://sberries.eu/wp-content/uploads/2023/10/32623864_32623854.jpg" alt="Frambuesas frescas">
+        </div>
+      </article>
+
+      <!-- ARÁNDANOS -->
+      <article class="berries-item">
+        <div class="berries-info">
+          <h2 data-i18n="berries.blueberries">ARÁNDANOS</h2>
+
+          <h3 data-i18n="berries.packaging">Embalaje:</h3>
+          <ul>
+            <li>125gr clamshell punnets</li>
+            <li>250 gr punnets</li>
+            <li>Caja de cartón de 2 kg</li>
+            <li>Caja de cartón / caja de plástico de 3 kg</li>
+          </ul>
+
+          <p><span class="label" data-i18n="berries.exportedby">Exportado por:</span> transporte aéreo y terrestre</p>
+          <p><span class="label" data-i18n="berries.origin">Origen:</span> Marruecos / España / Portugal / Perú / México / Ecuador / Colombia</p>
+        </div>
+        <div class="berries-photo">
+          <img src="https://sberries.eu/wp-content/uploads/2023/10/blueberry-8155061-scaled-1-1024x683.jpg" alt="Arándanos frescos">
+        </div>
+      </article>
+
+      <!-- MORAS -->
+      <article class="berries-item">
+        <div class="berries-info">
+          <h2 data-i18n="berries.blackberries">MORAS</h2>
+
+          <h3 data-i18n="berries.packaging">Embalaje:</h3>
+          <ul>
+            <li>125gr clamshell punnets</li>
+          </ul>
+
+          <p><span class="label" data-i18n="berries.exportedby">Exportado por:</span> transporte aéreo y terrestre</p>
+          <p><span class="label" data-i18n="berries.origin">Origen:</span> España / México / Marruecos</p>
+        </div>
+        <div class="berries-photo">
+          <img src="https://sberries.eu/wp-content/uploads/2023/10/fotografia-luz-natural-blackberry-min1-scaled-1-1024x682.jpg" alt="Moras frescas">
+        </div>
+      </article>
+
+      <!-- FRESAS -->
+      <article class="berries-item">
+        <div class="berries-info">
+          <h2 data-i18n="berries.strawberries">FRESAS</h2>
+
+          <h3 data-i18n="berries.packaging">Embalaje:</h3>
+          <ul>
+            <li>125gr clamshell punnets</li>
+            <li>Cestas de 250 gr</li>
+            <li>Caja de cartón de 1 kg</li>
+          </ul>
+
+          <p><span class="label" data-i18n="berries.exportedby">Exportado por:</span> transporte aéreo y terrestre</p>
+          <p><span class="label" data-i18n="berries.origin">Origen:</span> Egipto / Marruecos / España / Australia</p>
+        </div>
+        <div class="berries-photo">
+          <img src="https://sberries.eu/wp-content/uploads/2023/10/slajder4-1536x1024.jpg" alt="Fresas frescas">
+        </div>
+      </article>
+
+      <!-- MANGO -->
+      <article class="berries-item">
+        <div class="berries-info">
+          <h2 data-i18n="berries.mango">MANGO</h2>
+
+          <h3 data-i18n="berries.packaging">Embalaje:</h3>
+          <ul>
+            <li>Caja de 4 kg</li>
+            <li>Caja de 6 kg</li>
+          </ul>
+
+          <p><span class="label" data-i18n="berries.exportedby">Exportado por:</span> transporte aéreo y terrestre</p>
+          <p><span class="label" data-i18n="berries.origin">Origen:</span> Perú / Brasil / México</p>
+        </div>
+        <div class="berries-photo">
+          <img src="https://sberries.eu/wp-content/uploads/2023/10/slajder4-1024x683.jpg" alt="Mangos frescos">
+        </div>
+      </article>
+
+      <!-- CEREZAS DULCES -->
+      <article class="berries-item">
+        <div class="berries-info">
+          <h2 data-i18n="berries.cherries">CEREZAS DULCES</h2>
+
+          <h3 data-i18n="berries.packaging">Embalaje:</h3>
+          <ul>
+            <li>125gr clamshell punnets</li>
+            <li>Cestas de 250 gr</li>
+            <li>Caja de cartón de 2 kg</li>
+            <li>Caja de cartón de 3 kg</li>
+          </ul>
+
+          <p><span class="label" data-i18n="berries.exportedby">Exportado por:</span> transporte aéreo y terrestre</p>
+          <p><span class="label" data-i18n="berries.origin">Origen:</span> España / Chile</p>
+        </div>
+        <div class="berries-photo">
+          <img src="https://sberries.eu/wp-content/uploads/2023/10/slajder4-2048x1365.jpg" alt="Cerezas dulces frescas">
+        </div>
+      </article>
+
+      <!-- FRUTAS TROPICALES -->
+      <article class="berries-item">
+        <div class="berries-info">
+          <h2 data-i18n="berries.tropical">FRUTAS TROPICALES</h2>
+
+          <h3>Products:</h3>
+          <p>Avocados / Granadilla / Maracuyá / Mangosteen / Physalis / Dragon fruit / Baby pineapples / Carambola</p>
+
+          <p><span class="label" data-i18n="berries.exportedby">Exportado por:</span> airfreight</p>
+          <p><span class="label" data-i18n="berries.origin">Origen:</span> Perú / Colombia / Ecuador / Brasil</p>
+        </div>
+        <div class="berries-photo">
+          <img src="https://sberries.eu/wp-content/uploads/2023/10/TROPICAL-FRUITS--2048x1639.jpg" alt="Frutas tropicales">
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<!-- =================== PIE DE PÁGINA =================== -->
+<footer>
+  <div class="footer-news" role="region" aria-label="Mantente informado">
+    <span data-i18n="footer.newsTitle">¡Mantente informado!</span>
+    <div class="icons">
+      <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    </div>
+  </div>
+
+  <section class="ff-grid">
+    <div class="ff-wrap">
+      <div class="ff-products">
+        <h3 class="ff-title" data-i18n="footer.products">Productos</h3>
+        <ul class="ff-list">
+          <li><a href="/productos/#palta">Palta</a></li>
+          <li><a href="/productos/#curcuma">Cúrcuma</a></li>
+          <li><a href="/productos/#esparrago">Espárrago verde</a></li>
+          <li><a href="/productos/#mango">Mango</a></li>
+          <li><a href="/productos/#granada">Granada</a></li>
+          <li><a href="/productos/#arandano">Arándano</a></li>
+          <li><a href="/productos/#jengibre">Jengibre</a></li>
+        </ul>
+      </div>
+
+      <div class="ff-about">
+        <h3 class="ff-title" data-i18n="footer.about">Sobre Nosotros</h3>
+        <ul class="ff-list">
+          <li><a href="/somos/" data-i18n="footer.aboutUs">Quiénes Somos</a></li>
+          <li><a href="/servicios/" data-i18n="footer.services">Servicios</a></li>
+          <li><a href="/certificaciones/" data-i18n="footer.certs">Certificaciones</a></li>
+          <li><a href="/calidad/" data-i18n="footer.quality">Calidad</a></li>
+          <li><a href="/contacto/" data-i18n="footer.contact">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="ff-brand">
+        <div class="brand-box">
+          <img src="https://frutasalifruit.com/wp-content/uploads/grupoalifruit.png" alt="Logo">
+          <div class="social" aria-label="Redes sociales">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ff-contact">
+        <h3 class="ff-title" data-i18n="footer.contactTitle">Contacto</h3>
+        <div class="contact">
+          <div class="ci">
+            <span class="round"><i class="fa-solid fa-phone-volume"></i></span>
+            <div><a href="tel:+905375207022">+90 537 520 70 22</a></div>
+          </div>
+          <div class="ci">
+            <span class="round"><i class="fa-solid fa-envelope"></i></span>
+            <div><a href="mailto:info@omlamerica.com">info@omlamerica.com</a></div>
+          </div>
+          <div class="ci">
+            <span class="round"><i class="fa-solid fa-location-dot"></i></span>
+            <div>Güzeloba Mah. Çağlayangil Cad. No: 3B, 07230<br>Muratpaşa / Antalya</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="footer-legal">
+    <div class="links">
+      <a href="#">Términos y condiciones</a>
+      <a href="#">Política de cookies</a>
+      <a href="#">Política de privacidad</a>
+    </div>
+    <div class="country">Yarphonestore.com – Perú.</div>
+  </section>
+</footer>
+
+<!-- ===== TICKER INFERIOR ===== -->
+<div class="ticker" role="region" aria-label="Avisos y contacto">
+  <div class="ticker__track">
+    <div class="ticker__inner">
+      <span class="ticker__item">SERVICIO ESPECIAL USUARIO 24h</span><span class="ticker__sep">→</span>
+      <a class="ticker__item" href="https://wa.me/51910064458" target="_blank" rel="noopener">T +51&nbsp;910&nbsp;064&nbsp;458</a>
+      <span class="ticker__item">SERVICIO ESPECIAL USUARIO 24h</span><span class="ticker__sep">→</span>
+      <a class="ticker__item" href="https://wa.me/51910064458" target="_blank" rel="noopener">T +51&nbsp;910&nbsp;064&nbsp;458</a>
+      <span class="ticker__item">SERVICIO ESPECIAL USUARIO 24h</span><span class="ticker__sep">→</span>
+      <a class="ticker__item" href="https://wa.me/51910064458" target="_blank" rel="noopener">T +51&nbsp;910&nbsp;064&nbsp;458</a>
+    </div>
+    <div class="ticker__inner" aria-hidden="true">
+      <span class="ticker__item">SERVICIO ESPECIAL USUARIO 24h</span><span class="ticker__sep">→</span>
+      <a class="ticker__item" href="https://wa.me/51910064458" target="_blank" rel="noopener">T +51&nbsp;910&nbsp;064&nbsp;458</a>
+      <span class="ticker__item">SERVICIO ESPECIAL USUARIO 24h</span><span class="ticker__sep">→</span>
+      <a class="ticker__item" href="https://wa.me/51910064458" target="_blank" rel="noopener">T +51&nbsp;910&nbsp;064&nbsp;458</a>
+      <span class="ticker__item">SERVICIO ESPECIAL USUARIO 24h</span><span class="ticker__sep">→</span>
+      <a class="ticker__item" href="https://wa.me/51910064458" target="_blank" rel="noopener">T +51&nbsp;910&nbsp;064&nbsp;458</a>
+    </div>
+  </div>
+</div>
+
+<!-- JS EXTERNO -->
+<script src="/assets/js/lang.js"></script>
+<script src="/assets/js/productos.js"></script>
+</body>
+</html>
